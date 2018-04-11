@@ -1,35 +1,20 @@
-abstract public class circle extends shape {
-    public static int  count;
+ public  class circle extends shape {
+    private int r ;
 
-    static int r ;
+    public circle (){
+}
 
-
-
-    static double area ;
-
-public abstract void circle ();
-    public circle(double area1){
-        count++;
-    }
-
-    public  circle (int r1 , double pi1 ){
+    public  circle (int r1 ){
         this();
-        count++;
-        r=r1;
-
-
-    }
-    public void setR (int r1){ r= r1;
-    }
-    public static int getR() {
-        return r;
+        setR(r1);
     }
 
+     public void setR (int r1){ r= r1;
+     }
+     public int getR(){return r;}
 
-
-
-    public static double getArea() {
-        area = (r*r*3.14);
-        return area;
+    public void show(){
+        System.out.println("面積="+(r*r*3.14));
+        System.out.println("周長="+(r*2*3.14));
     }
 }
